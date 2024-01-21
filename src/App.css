@@ -1,14 +1,92 @@
 .App {
+  width: 100%;
+  padding: 100px 50px;
+  overflow: auto;
+  min-height: 100%;
+  color: white;
+  background-color: #282c34;
   text-align: center;
+  box-sizing: border-box;
+}
+
+.Input-wrapper {
+  display: flex;
+  margin-top: 20px;
+  height: 50px;
+}
+
+.Input-wrapper input {
+  font-size: 18px;
+}
+
+.Input-wrapper button {
+  margin-left: 10px;
+}
+
+.Input-wrapper button:hover {
+  background-color: yellowgreen;
+  cursor: pointer;
 }
 
 .App-header {
-  background-color: #282c34;
-  min-height: 100vh;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
+  margin-bottom: 50px;
+  width: 100%;
   font-size: calc(10px + 2vmin);
-  color: white;
+}
+
+.Pokemon-cards {
+  display: flex;
+  padding: 0 5px;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  height: 100vh;
+}
+
+.pokemon-card {
+  border: 2px solid yellowgreen;
+  padding: 10px;
+  width: 260px;
+  min-height: 370px;
+  border-radius: 10px;
+  -webkit-box-shadow: 5px 5px 15px 5px #FF8080, -9px 5px 15px 5px #FFE488, -7px -5px 15px 5px #8CFF85, 12px -5px 15px 5px #80C7FF, 12px 10px 15px 7px #E488FF, -10px 10px 15px 7px #FF616B, -10px -7px 27px 1px #8E5CFF, 5px -40px 15px 22px rgba(0,0,0,0);
+  box-shadow: 5px 5px 15px 5px #FF8080, -9px 5px 15px 5px #FFE488, -7px -5px 15px 5px #8CFF85, 12px -5px 15px 5px #80C7FF, 12px 10px 15px 7px #E488FF, -10px 10px 15px 7px #FF616B, -10px -7px 27px 1px #8E5CFF, 5px -40px 15px 22px rgba(0,0,0,0);
+}
+
+.pokemon-img {
+  width: 90%;
+  margin-top: 20px;
+  animation: customAni 5s ease-in-out 0s infinite normal none;
+}
+
+@keyframes customAni {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+
+  10%,
+  30%,
+  50%,
+  70% {
+    transform: translateY(-8px);
+  }
+
+  20%,
+  40%,
+  60% {
+    transform: translateY(8px);
+  }
+
+  80% {
+    transform: translateY(6.4px);
+  }
+
+  90% {
+    transform: translateY(-6.4px);
+  }
 }
