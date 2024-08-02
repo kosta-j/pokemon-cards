@@ -2,7 +2,7 @@ import './App.css';
 import {useState} from "react";
 
 function App() {
-    const [pokemonName, setPokemonName] = useState('');
+    const [pokemonName, setPokemonName] = useState('ditto');
     const [pokemon, setPokemon] = useState('');
     const searchPokemon = () => {
         fetch(`https://pokeapi.co/api/v2/pokemon/${pokemonName}`)
@@ -35,6 +35,7 @@ function App() {
         <section className="Pokemon-cards">
             <div className="pokemon-card">
                 <p>{pokemon.name}</p>
+                <p>XP:{pokemon.xp}</p>
                 <img className="pokemon-img" src={pokemon.img_large} alt={pokemon.name}/>
             </div>
         </section>
