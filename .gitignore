@@ -114,7 +114,6 @@ dist
 
 # production
 /build
-/public
 
 # misc
 .DS_Store
